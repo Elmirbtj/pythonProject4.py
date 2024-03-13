@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Transactions</title>
+</head>
+<body>
+    <h1>Liste des Transactions</h1>
+    <ul>
+        {% for transaction in transactions %}
+            <li>{{ transaction.account_number }} - {{ transaction.amount }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'transaction_create' %}">Créer une nouvelle transaction</a>
+</body>
+</html>

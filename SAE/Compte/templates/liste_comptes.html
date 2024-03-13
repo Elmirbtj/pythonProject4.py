@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des comptes</title>
+</head>
+<body>
+    <h1>Liste des comptes</h1>
+    <ul>
+        {% for compte in comptes %}
+            <li><a href="{% url 'detail_compte' compte.id %}">{{ compte.nom }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'creer_compte' %}">Créer un compte</a>
+</body>
+</html>

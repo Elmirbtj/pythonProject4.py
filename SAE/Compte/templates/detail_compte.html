@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails du compte</title>
+</head>
+<body>
+    <h1>Détails du compte</h1>
+    <p>ID: {{ compte.id }}</p>
+    <p>Nom: {{ compte.nom }}</p>
+    <p>Montant actuel: {{ compte.montant_actuel }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <label for="montant">Ajouter un montant:</label>
+        <input type="number" id="montant" name="montant">
+        <button type="submit">Ajouter</button>
+    </form>
+</body>
+</html>

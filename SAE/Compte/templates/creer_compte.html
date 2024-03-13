@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Créer un compte</title>
+</head>
+<body>
+    <h1>Créer un compte</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="nom">Nom du compte:</label>
+        <input type="text" id="nom" name="nom">
+        <button type="submit">Créer</button>
+    </form>
+</body>
+</html>
